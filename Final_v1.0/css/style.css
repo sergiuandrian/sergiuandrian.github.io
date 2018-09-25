@@ -677,7 +677,17 @@ footer {
     font-family: 'FontAwesome';
     content: "\f167";
 }
-
+@media (max-width: 719px){
+    .service-box li {
+        width:50%;
+    }
+}
+@media (max-width: 479px){
+    .service-box li {
+        width:100%;
+        float:none;
+    }
+}
 
 
 
