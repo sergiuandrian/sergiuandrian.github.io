@@ -23,15 +23,15 @@ a:hover{
     max-width: 1130px;
 }
 p{
-    padding: 0;
+    padding: 5px 0;
 }
 /*==========================================================================*/
 h2.title {
     font-size: 20px;
     color: orange;
     border-bottom: 1px solid #888;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
 }
 h2.title.center{
     display: table;
@@ -69,7 +69,6 @@ header .nav li a {
 /*==========================================================================*/
 .banner {
     background-image: url('../images/bg-1.jpg');
-    padding: 100px 0;
     background-size: cover;
     margin-bottom: 50px;
     height: 100vh;
@@ -79,7 +78,7 @@ header .nav li a {
     line-height: 120px;
     color: orangered;
     text-transform: uppercase;
-    font-weight: 800;
+    font-weight: 700;
     text-align: center;
 }
 /*==========================================================================*/
@@ -96,7 +95,7 @@ header .nav li a {
 }
 .box .comments .block .slide_comment {
     padding: 10px;
-    background-color: #E9E9E9;;
+    background-color: #E9E9E9;
     float: left;
     width: 45%;
     box-sizing: border-box;
@@ -182,16 +181,15 @@ header .nav li a {
     display: table;
     margin: 0 auto;
 }
+.projects .filterbtn li {
+    float: left;
+}
 .projects .filterbtn li a {
     text-transform: uppercase;
-    padding: 10px 10px;
-    display: inline-table;
+    padding: 10px;
     background-color: #777;
     margin: 0 1px;
     color: #fff; 
-}
-.projects .filterbtn li {
-    float: left;
 }
 .projects .filterbtn li a:hover {
     background-color: #e7512f;
@@ -246,7 +244,7 @@ header .nav li a {
 }
 .team p {
     text-align: center;
-    margin: 30px auto;
+    margin: 30px 0;
 }
 .team .team-img li {
     float: left;
@@ -268,7 +266,7 @@ header .nav li a {
 }
 /*==========================================================================*/
 .service-box li i.fa-icon:hover {
-      background-color: #e7512f;
+    background-color: #e7512f;
     color: #fff;
 }
 .service-box li {
@@ -325,10 +323,8 @@ header .nav li a {
     background-size: cover;
 }
 .pricing p {
-    font-size: 16px;
     text-align: center;
     margin: 20px 5px 50px;
-    line-height: 22px;
 }
 .pricing .wrap-box {
     width: 100%;
@@ -337,15 +333,66 @@ header .nav li a {
     float: left;
     border: 1px solid #fff;
     text-align: center;
-    width: 280px;
+    width: 25%;
     background: #fff;
+}
+/*==========================================================================*/
+.pricing-table .tablehead {
+    background: url(../images/dots.png) #373737;
+}
+.pricing-table .tablehead h3 {
+   color: #fff;
+   padding-top: 30px;
+   padding-bottom: 20px;
+   text-transform: uppercase;
+}
+.pricing-table i.fa {
+   font-size: 26px;
+   width: 90px;
+   height: 84px;
+   line-height: 45px; 
+   margin-bottom: -48px;
+   text-align: center;
+   border-radius: 50%;
+   background: #fff;
+}
+.pricing-table .fa:before {
+   content: "\f013";
+}
+.pricing-table li {
+   padding: 10px 0;
+   border-bottom: 1px solid #e4e4e4;
+   font-size: 14px;
+}
+.pricing-table .price span {
+   font-size: 26px;
+}
+.pricing-table li:nth-child(2n) {
+   background: #f3f3f3;
+}
+.pricing-table .button {
+   padding-top: 20px;
+   border-bottom: 0;
+}
+.pricing-table .btn {
+   border-radius: 5px;
+   display: inline-block;
+   padding: 0 11px;
+   border: 1px solid transparent;
+   background: #777;
+   line-height: 30px;
+   cursor: pointer;
+   color: #fff;
+   text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+   text-transform: uppercase;
+   letter-spacing: .8px;
 }
 /*==========================================================================*/
 .pricing .wrap-box .selected {
     float: left;
     border: 1px solid #fff;
     text-align: center;
-    width: 280px;
+    width: 24%;
     background: #494949;
 }
 .selected .tablehead {
@@ -396,65 +443,12 @@ header .nav li a {
     border-radius: 5px;
     display: inline-block;
     padding: 5px 15px;
-    border: 1px solid transparent;
     background-color: #e7512f;
     line-height: 30px;
     cursor: pointer;
     color: #fff;
     text-shadow: 1px 1px 1px rgba(0,0,0,.5);
     text-transform: uppercase;
-    letter-spacing: .8px;
-}
-/*==========================================================================*/
-.pricing-table .tablehead {
-     background: url(../images/dots.png) #373737;
-}
-.pricing-table .tablehead h3 {
-    color: #fff;
-    padding-top: 30px;
-    padding-bottom: 20px;
-    text-transform: uppercase;
-}
-.pricing-table i.fa {
-    font-size: 26px;
-    width: 90px;
-    height: 84px;
-    line-height: 45px; 
-    margin-bottom: -48px;
-    text-align: center;
-    border-radius: 50%;
-    background: #fff;
-}
-.pricing-table .fa:before {
-    content: "\f013";
-}
-.pricing-table li {
-    padding: 10px 0;
-    border-bottom: 1px solid #e4e4e4;
-    font-size: 14px;
-}
-.pricing-table .price span {
-    font-size: 26px;
-}
-.pricing-table li:nth-child(2n) {
-    background: #f3f3f3;
-}
-.pricing-table .button {
-    padding-top: 20px;
-    border-bottom: 0;
-}
-.pricing-table .btn {
-    border-radius: 5px;
-    display: inline-block;
-    padding: 0 11px;
-    border: 1px solid transparent;
-    background: #777;
-    line-height: 30px;
-    cursor: pointer;
-    color: #fff;
-    text-shadow: 1px 1px 1px rgba(0,0,0,.5);
-    text-transform: uppercase;
-    letter-spacing: .8px;
 }
 /*==========================================================================*/
 .get-in {
@@ -468,24 +462,26 @@ header .nav li a {
 .user-signin .form-input {
     overflow: hidden;
     margin: 0 0 20px;
-    width: 100%;
 }
 .user-signin .form-input label {
     display: block;
     clear: both;
-    overflow: hidden;
     margin: 0 0 5px;
-    width: 100%;
 }
 .user-signin .form-input label span {
-    display: inline-block;
     color: red;
 }
-.user-signin input,textarea {
+.user-signin input[type=text],input[type=email],input[type=tel],textarea {
     display: inline-block;
     padding: 12px 15px;
     border: 1px solid #DFDFDF;
     background: #fff;
+    box-sizing: border-box;
+    width: 100%;
+}
+.user-signin textarea {
+    height: 180px;
+    resize: none;
 }
 .user-signin .btn {
     border-radius: 3px;
@@ -493,23 +489,24 @@ header .nav li a {
     background: #777;
     color: #fff;
     cursor: pointer;
+    padding: 12px 15px;
 }
 .user-signin .form-input input[type=submit] {
     background-color: #e7512f;
 }
-.map {
-background-color: red;
-border: 1px solid black;
-float: right;
-width: 50%;
+/*==========================================================================*/
+.get-in .map {
+    border: 1px solid black;
+    float: right;
+    width: 50%;
+    background-color: red;
 }
 #map-canvas {
-    height: 400px;
+    height: 450px;
 }
 /*==========================================================================*/
 footer {
     background: #222;
-
 }
 .footerhead {
     padding-top: 100px;
@@ -534,7 +531,7 @@ footer {
     color: #9E9E9E;
     font-size: 11px;
 }
-.footer-menu .angle-right::before {
+.footer-menu .angle-right:before {
     display: inline-block;
     margin-right: 7px;
     color: #5b5b5b;
@@ -552,7 +549,7 @@ footer {
 /*==========================================================================*/
 .middleborder {
     clear: both;
-    margin: 50px 15px;
+    margin: 50px 0;
     border-bottom: 1px solid #888;
 }
 .footer-menu i {
@@ -581,7 +578,7 @@ footer {
     color: #9E9E9E;
     font-size: 11px;
 }
-.logo {
+footer .logo {
     background-image: url('../images/logo.png');
     background-repeat: no-repeat;
     height: 40px;
@@ -595,7 +592,7 @@ footer {
     line-height: 22px;
     margin-left: 0;
 }
-.action {
+footer .action {
     display: table;
 }
 .action input[type=email] {
@@ -630,11 +627,9 @@ footer {
     background: #1D1D1D;
     overflow: hidden;
 }
-
 .footerbottom .copyrights {
     font-size: 11px;
     color: #777;
-    width: 40%;
     float: left;
 }
 .footerbottom .socialmedia {
