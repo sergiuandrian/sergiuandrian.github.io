@@ -164,7 +164,6 @@ header .nav li a:hover {
 .box .skills li .line .color-line {
     height: 100%;
     background-color: red;
-    display: inline-block;
     float: left;
 }
 /*==========================================================================*/
