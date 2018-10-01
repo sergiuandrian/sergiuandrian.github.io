@@ -52,14 +52,14 @@ header .logo {
 }
 header .nav {
     float: right;
-    margin-top: 10px;
+    margin-top: 8px;
 }
 header .nav li {
     float: left;
 }
 header .nav li a {
     text-transform: uppercase;
-    padding: 25px 17px;
+    padding: 22px 17px;
     font-size: 13px;
 }
 header .nav li a:hover {
@@ -262,6 +262,7 @@ header .nav li a:hover {
     margin-top: -5px;
     background-color: #fff;
 }
+/*==========================================================================*/
 .service-box li {
     float: left;
     width: 25%;
@@ -276,18 +277,52 @@ header .nav li a:hover {
 }
 .service-box i {
     display: table; 
-    margin: 0 auto 20px;
+    margin: 0 auto 60px;
 }
 .service-box li i.fa-icon:hover {
     background-color: #e7512f;
     color: #fff;
 }
-.service-box i:before {
+.service-box i.fa-leaf:before {
     content: '\f06c';
     font-family: 'FontAwesome';
     color: #f00;
     position: relative;
-    border: 2px solid red;
+    border: 2px solid #fff;
+    box-shadow: inset 0 0 13px rgba(0,0,0,.4);
+    padding: 25px;
+    border-radius: 50%;
+    font-size: 35px;
+}
+.service-box i.fa-recycle:before {
+    content: "\f1b8";
+    font-family: 'FontAwesome';
+    color: #f00;
+    position: relative;
+    border: 2px solid #fff;
+    box-shadow: inset 0 0 13px rgba(0,0,0,.4);
+    padding: 25px;
+    border-radius: 50%;
+    font-size: 35px;
+}
+.service-box i.fa-puzzle:before {
+    content: '\f12e';
+    font-family: 'FontAwesome';
+    color: #f00;
+    position: relative;
+    border: 2px solid #fff;
+    box-shadow: inset 0 0 13px rgba(0,0,0,.4);
+    padding: 25px;
+    border-radius: 50%;
+    font-size: 35px;
+}
+.service-box i.fa-legal:before {
+    content: '\f0e3';
+    font-family: 'FontAwesome';
+    color: #f00;
+    position: relative;
+    border: 2px solid #fff;
+    box-shadow: inset 0 0 13px rgba(0,0,0,.4);
     padding: 25px;
     border-radius: 50%;
     font-size: 35px;
@@ -298,7 +333,7 @@ header .nav li a:hover {
 }
 .service-box h3 {
     margin: 0 0 10px;
-    padding: 0 15px 10px;
+    padding: 22px 15px 10px;
     text-align: center;
     font-size: 23px;
     color: #777;
@@ -479,11 +514,17 @@ header .nav li a:hover {
     display: inline-block;
     color: red;
 }
-.user-signin input,textarea {
+.user-signin input[type=text],input[type=email],input[type=tel],textarea {
     display: inline-block;
     padding: 12px 15px;
     border: 1px solid #DFDFDF;
     background: #fff;
+    box-sizing: border-box;
+    width: 100%;
+}
+.user-signin textarea {
+    height: 180px;
+    resize: none;
 }
 .user-signin .btn {
     border-radius: 3px;
@@ -491,6 +532,7 @@ header .nav li a:hover {
     background: #777;
     color: #fff;
     cursor: pointer;
+    padding: 12px 15px;
 }
 .user-signin .form-input input[type=submit] {
     background-color: #e7512f;
@@ -579,7 +621,7 @@ footer {
     color: #9E9E9E;
     font-size: 11px;
 }
-.logo {
+,.footer-menu .logo {
     background-image: url('../images/logo.png');
     background-repeat: no-repeat;
     height: 40px;
