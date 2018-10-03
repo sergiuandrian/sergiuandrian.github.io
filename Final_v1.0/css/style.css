@@ -37,6 +37,7 @@ h2.title.center{
     display: table;
     margin-left: auto;
     margin-right: auto;
+    padding: 0 20px 10px;
 }
 /*==========================================================================*/
 header{
@@ -336,137 +337,90 @@ header .nav li a:hover {
 /*==========================================================================*/
 .pricing {
     background: url('../images/block-bg-3.jpg') no-repeat;
-    padding: 100px 0;
     background-size: cover;
+    padding: 100px 0;
+}
+.pricing .title {
+    margin-bottom: 20px;
 }
 .pricing p {
-    font-size: 16px;
     text-align: center;
-    margin: 20px 5px 50px;
-    line-height: 22px;
+    margin-bottom: 50px;
 }
 .pricing .wrap-box .pricing-table {
     float: left;
     border: 1px solid #fff;
     text-align: center;
-    width: 280px;
-    background: #fff;
+    width: 25%;
+    background-color: #fff;
+    box-sizing: border-box;
 }
-/*==========================================================================*/
-.pricing .wrap-box .selected {
-    float: left;
-    border: 1px solid #fff;
-    text-align: center;
-    width: 280px;
-    background: #494949;
+.pricing .wrap-box .pricing-table .tablehead {
+    background: url(../images/dots.png) #373737;
 }
-.selected .tablehead {
-    background: url(../images/dots.png);
-    background-color: #373737;
-}
-.selected .tablehead h3 {
+.pricing .wrap-box .pricing-table .tablehead h3 {
     color: #fff;
-    padding-top: 30px;
-    padding-bottom: 20px;
-    margin-top: -20px;
+    padding: 30px 0 20px;
     text-transform: uppercase;
 }
-.selected i.fa {
+.pricing .wrap-box .pricing-table .tablehead i {
     font-size: 26px;
     width: 90px;
     height: 84px;
     line-height: 45px; 
     margin-bottom: -48px;
-    text-align: center;
     border-radius: 50%;
-    background: #494949;
-}
-.selected .fa:before {
+    background-color: #fff;
+    font-family: 'FontAwesome';
     display: inline-block;
-    content: "\f013";
 }
-.selected li {
-    padding: 10px 0;
-    border-bottom: 1px #e4e4e4 solid;
-    font-size: 14px;
-    border-color: #585858;
-    color: #949494; 
-}
-.selected .price span {
-    font-size: 26px;
-}
-.selected .even {
-    background: #373737;
-}
-.selected .button {
-    border-color: #585858;
-    color: #949494;
-    padding: 35px 0;
-    border-bottom: 0;
-}
-.selected .btn {
-    border-radius: 5px;
-    display: inline-block;
-    padding: 5px 15px;
-    border: 1px solid transparent;
-    background-color: #e7512f;
-    line-height: 30px;
-    cursor: pointer;
-    color: #fff;
-    text-shadow: 1px 1px 1px rgba(0,0,0,.5);
-    text-transform: uppercase;
-    letter-spacing: .8px;
-}
-/*==========================================================================*/
-.pricing-table .tablehead {
-     background: url(../images/dots.png) #373737;
-}
-.pricing-table .tablehead h3 {
-    color: #fff;
-    padding-top: 30px;
-    padding-bottom: 20px;
-    text-transform: uppercase;
-}
-.pricing-table i.fa {
-    font-size: 26px;
-    width: 90px;
-    height: 84px;
-    line-height: 45px; 
-    margin-bottom: -48px;
-    text-align: center;
-    border-radius: 50%;
-    background: #fff;
-}
-.pricing-table .fa:before {
-    content: "\f013";
-}
-.pricing-table li {
+.pricing .wrap-box .pricing-table li {
     padding: 10px 0;
     border-bottom: 1px solid #e4e4e4;
     font-size: 14px;
 }
-.pricing-table .price span {
+.pricing .wrap-box .pricing-table .price span {
     font-size: 26px;
 }
-.pricing-table li:nth-child(2n) {
-    background: #f3f3f3;
+.pricing .wrap-box .pricing-table li:nth-child(2n) {
+    background-color: #f3f3f3;
 }
-.pricing-table .button {
+.pricing .wrap-box .pricing-table .button {
     padding-top: 20px;
-    border-bottom: 0;
+    border: 0;
 }
-.pricing-table .btn {
+.pricing .wrap-box .pricing-table .button a {
     border-radius: 5px;
     display: inline-block;
-    padding: 0 11px;
-    border: 1px solid transparent;
-    background: #777;
-    line-height: 30px;
+    padding: 5px 11px;
+    background-color: #777;
     cursor: pointer;
     color: #fff;
     text-shadow: 1px 1px 1px rgba(0,0,0,.5);
     text-transform: uppercase;
-    letter-spacing: .8px;
+}
+/*==========================================================================*/
+.pricing .wrap-box .selected {
+    background-color: #494949;
+}
+.pricing .wrap-box .selected .tablehead {
+    margin-top: -20px;
+} 
+.pricing .wrap-box .selected .tablehead i {
+    background-color: #494949;
+}
+.pricing .wrap-box .selected li {
+    border-color: #585858;
+    color: #949494; 
+}
+.pricing .wrap-box .selected li:nth-child(2n) {
+    background-color: #373737;
+}
+.pricing .wrap-box .selected .button {
+    padding: 35px 0;
+}
+.pricing .wrap-box .selected .button a {
+    background-color: #e7512f;
 }
 /*==========================================================================*/
 .get-in {
