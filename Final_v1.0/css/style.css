@@ -282,94 +282,54 @@ header .nav li a:hover {
     background-color: #fff;
 }
 /*==========================================================================*/
+.service-box {
+    margin-bottom: 100px;
+}
 .service-box li {
     float: left;
     width: 25%;
     text-align: center;
-    position: relative;
-    padding: 40px 0;
-    margin: 100px 0;
+    padding: 30px 10px;
+    box-sizing: border-box;
 }
 .service-box li:hover {
     background-color: #e7512f;
     color: #fff;
 }
-.service-box i {
+.service-box li i {
     display: table; 
     margin: 0 auto 60px;
 }
-.service-box li i.fa-icon:hover {
-    background-color: #e7512f;
-    color: #fff;
-}
-.service-box i.fa-leaf:before {
-    content: '\f06c';
+.service-box i:before {
     font-family: 'FontAwesome';
     color: #f00;
-    position: relative;
+    font-size: 35px;
     border: 2px solid #fff;
     box-shadow: inset 0 0 13px rgba(0,0,0,.4);
     padding: 25px;
     border-radius: 50%;
-    font-size: 35px;
-}
-.service-box i.fa-recycle:before {
-    content: "\f1b8";
-    font-family: 'FontAwesome';
-    color: #f00;
-    position: relative;
-    border: 2px solid #fff;
-    box-shadow: inset 0 0 13px rgba(0,0,0,.4);
-    padding: 25px;
-    border-radius: 50%;
-    font-size: 35px;
-}
-.service-box i.fa-puzzle:before {
-    content: '\f12e';
-    font-family: 'FontAwesome';
-    color: #f00;
-    position: relative;
-    border: 2px solid #fff;
-    box-shadow: inset 0 0 13px rgba(0,0,0,.4);
-    padding: 25px;
-    border-radius: 50%;
-    font-size: 35px;
-}
-.service-box i.fa-legal:before {
-    content: '\f0e3';
-    font-family: 'FontAwesome';
-    color: #f00;
-    position: relative;
-    border: 2px solid #fff;
-    box-shadow: inset 0 0 13px rgba(0,0,0,.4);
-    padding: 25px;
-    border-radius: 50%;
-    font-size: 35px;
 }
 .service-box li:hover i:before {
     color: #fff;
     border-color: #fff;
 }
-.service-box h3 {
-    margin: 0 0 10px;
+.service-box li h3 {
+    margin-bottom: 10px;
     padding: 22px 15px 10px;
-    text-align: center;
     font-size: 23px;
     color: #777;
-    font-weight: 800;
+    font-weight: 700;
     text-transform: uppercase;
 }
 .service-box li:hover h3 {
     color: #fff;
 }
-.service-box p {
-    padding: 0 15px;
+.service-box li p {
+    margin-bottom: 30px;
 }
-.service-box a {
+.service-box li a {
     color: #e7512f;
-    display: table;
-    margin: 30px auto 0;
-    background: #fff;
+    background-color: #fff;
     padding: 10px 15px;
     text-transform: uppercase;
 }
