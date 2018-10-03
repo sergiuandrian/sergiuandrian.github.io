@@ -71,18 +71,31 @@ header .nav li a:hover {
 /*==========================================================================*/
 .banner {
     background-image: url('../images/bg-1.jpg');
-    padding: 100px 0;
+    padding-top: 300px;
     background-size: cover;
     margin-bottom: 50px;
     height: 100vh;
+    text-align: center;
 }
-.banner .slide li {
+.banner span {
+    display: block;
+    color: #fff;
+    text-transform: uppercase;
+}
+.banner .title {
+    background-color: rgba(0,0,0,.4);
     font-size: 53px;
-    line-height: 120px;
     color: orangered;
     text-transform: uppercase;
-    font-weight: 800;
-    text-align: center;
+    font-weight: 700;
+    display: inline-block;
+    padding: 10px 20px;
+}
+.banner .title2 {
+    font-size: 40px;
+}
+.banner .title3 {
+    font-size: 30px;
 }
 /*==========================================================================*/
 .box {
