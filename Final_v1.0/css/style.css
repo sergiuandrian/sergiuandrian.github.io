@@ -621,7 +621,7 @@ footer {
     color: #9E9E9E;
     font-size: 11px;
 }
-,.footer-menu .logo {
+.footer-menu .logo {
     background-image: url('../images/logo.png');
     background-repeat: no-repeat;
     height: 40px;
@@ -637,6 +637,7 @@ footer {
 }
 .action {
     display: table;
+    margin: 0;
 }
 .action input[type=email] {
     height: 30px;
