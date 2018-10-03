@@ -427,57 +427,52 @@ header .nav li a:hover {
     background-image: url('../images/bg5.jpg');
     padding: 100px 0;
 }
-.user-signin {
+.get-in .title {
+    margin-bottom: 40px;
+}
+.get-in form {
     width: 49%;
     float: left;
 }
-.user-signin .form-input {
-    overflow: hidden;
-    margin: 0 0 20px;
-    width: 100%;
+.get-in form li {
+    margin-bottom: 20px;
 }
-.user-signin .form-input label {
-    display: block;
-    clear: both;
-    overflow: hidden;
-    margin: 0 0 5px;
-    width: 100%;
-}
-.user-signin .form-input label span {
+.get-in form li label {
+    margin-bottom: 5px;
     display: inline-block;
+}
+.get-in form li label span {
     color: red;
 }
-.user-signin input[type=text],input[type=email],input[type=tel],textarea {
-    display: inline-block;
+.get-in form li input[type=text], input[type=email], input[type=tel], textarea {
     padding: 12px 15px;
     border: 1px solid #DFDFDF;
-    background: #fff;
     box-sizing: border-box;
     width: 100%;
 }
-.user-signin textarea {
+.get-in form li textarea {
     height: 180px;
     resize: none;
 }
-.user-signin .btn {
+.get-in form li input[type=submit], input[type=reset] {
     border-radius: 3px;
     text-transform: uppercase;
     background: #777;
     color: #fff;
     cursor: pointer;
     padding: 12px 15px;
+    border: 0;
 }
-.user-signin .form-input input[type=submit] {
+.get-in form li input[type=submit] {
     background-color: #e7512f;
 }
 /*==========================================================================*/
 .get-in .map {
     float: right;
-    width: 50%;
+    width: 48%;
 }
-#map-canvas {
+.get-in .map #map-canvas {
     height: 450px;
-    margin-left: 20px;
 }
 /*==========================================================================*/
 footer {
