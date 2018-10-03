@@ -61,6 +61,7 @@ header .nav li a {
     text-transform: uppercase;
     padding: 22px 17px;
     font-size: 13px;
+    display: inline-block;
 }
 header .nav li a:hover {
     background-color: red;
