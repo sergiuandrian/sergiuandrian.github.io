@@ -124,7 +124,6 @@ header .nav li a:hover {
     display: block;
     content: '\f10e';
     font-family: 'FontAwesome';
-    float: right;
     color: #777;
     position: absolute;
     right: 10px;
@@ -139,6 +138,7 @@ header .nav li a:hover {
     margin-bottom: 10px;
     color: #777;
     font-size: 13px;
+    padding: 0;
 }
 .box .comments .block .slide_comment .author {
     display: table;
@@ -160,21 +160,26 @@ header .nav li a:hover {
 }
 .box .skills li {
     margin-bottom: 20px;
-    clear: both;
 }
 .box .skills .name {
     font-weight: 700;
 }
+.box .skills li div {
+    content: "";
+    display: table;
+    clear: both;
+    width: 100%;
+}
 .box .skills li .percent {
     float: left;
     width: 10%;
+    height: 20px;
 }
 .box .skills li .line {
     background-color: #E7E7E7;
     width: 90%;
     height: 20px;
     float: left;
-    margin-top: 5px;
 }
 .box .skills li .line .color-line {
     height: 100%;
