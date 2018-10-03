@@ -19,11 +19,11 @@ a:hover{
 }
 .content {
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 5px;
     max-width: 1170px;
 }
 p{
-    padding: 0;
+    padding: 10px 0;
 }
 /*==========================================================================*/
 h2.title {
@@ -40,32 +40,33 @@ h2.title.center{
 }
 /*==========================================================================*/
 header{
-    border-bottom: 1px solid red;
-    padding: 10px 0;
+    border-bottom: 1px solid #777;
+    margin-top: 10px;
+    padding-bottom: 10px;
 }
 header .logo {
     background-image: url('../images/logo.png');
     height: 40px;
     width: 200px;
-    display: block;
+    display: inline-block;
     float: left;
 }
 header .nav {
     float: right;
-    margin-top: 8px;
+    margin-top: 10px;
 }
 header .nav li {
     float: left;
+    margin-left: 25px;
 }
 header .nav li a {
     text-transform: uppercase;
-    padding: 22px 17px;
     font-size: 13px;
     display: inline-block;
+    color: #777;
 }
 header .nav li a:hover {
-    background-color: red;
-    color: #fff;
+    color: red;
 }
 /*==========================================================================*/
 .banner {
