@@ -193,6 +193,9 @@ header .nav li a:hover {
     padding: 100px 0;
     position: relative;
 }
+.projects .title {
+    margin-bottom: 20px;
+}
 .projects .note {
     position: absolute;
     margin-top: 12px;
@@ -251,6 +254,7 @@ header .nav li a:hover {
     padding: 10px;
     text-shadow: 1px 1px 1px #000;
     text-transform: uppercase;
+    cursor: pointer;
 }
 /*==========================================================================*/
 .team {
@@ -453,6 +457,7 @@ header .nav li a:hover {
 .get-in form li textarea {
     height: 180px;
     resize: none;
+    background-color: #fff;
 }
 .get-in form li input[type=submit], input[type=reset] {
     border-radius: 3px;
@@ -495,7 +500,7 @@ footer .footerhead .footer-menu h3 {
 }
 footer .footerhead .footer-menu a {
     color: #9E9E9E;
-    font-size: 11px;
+    font-size: 13px;
 }
 footer .footerhead .top {
     border-bottom: 1px solid #888;
@@ -512,6 +517,12 @@ footer .footerhead .top .footer-menu .angle li a:before {
     content: "\f105";
     font-family: 'FontAwesome';
 }
+footer .footerhead .top .footer-menu .angle li:hover a:before {
+    color: red;
+}
+footer .footerhead .top .footer-menu .angle li a:hover {
+    color: red;
+}
 footer .footerhead .top .footer-menu .tag li {
     float: left;
     margin: 0 5px 5px 0;
@@ -522,12 +533,20 @@ footer .footerhead .top .footer-menu .tag li a {
     background-color: #2C2C2C;
     color: #C4C4C4;
 }
+footer .footerhead .top .footer-menu .tag li a:hover {
+    color: #505050;
+    background-color: #6a6a6a;
+}
 /*==========================================================================*/
+footer .footerhead .bottom {
+    margin-bottom: 30px;
+}
 footer .footerhead .bottom .footer-menu .contacts li {
     margin-bottom: 7px;
     color: #9E9E9E;
     font-size: 11px;
 }
+
 footer .footerhead .bottom .footer-menu .contacts li i {
     color: #6a6a6a;
     font-size: 15px;
@@ -535,6 +554,9 @@ footer .footerhead .bottom .footer-menu .contacts li i {
 }
 footer .footerhead .bottom .footer-menu .contacts li i:before {
     font-family: 'FontAwesome';
+}
+footer .footerhead .bottom .footer-menu .contacts li a:hover {
+    color: blueviolet;
 }
 footer .footerhead .bottom .about {
     text-align: center;
@@ -559,7 +581,8 @@ footer .footerhead .bottom .about form input[type=email] {
     background-color: transparent;
     border: 1px solid #3F3F3F;
     float: left;
-    width: 80%;
+    width: calc(100% - 48px); 
+    color: #999;
 }
 footer .footerhead .bottom .about form input[type=submit] {
     background-color: #3F3F3F;
@@ -569,7 +592,7 @@ footer .footerhead .bottom .about form input[type=submit] {
     height: 30px;
     text-transform: uppercase;
     float: left;
-    width: 20%;
+    width: 48px;
     cursor: pointer;
 }
 footer .footerhead .bottom .flickr li {
@@ -635,21 +658,72 @@ footer .footerbottom .socialmedia li a:hover {
     color: #fff;
 }
 /*==========================================================================*/
+@media (max-width: 1023px){
+    footer .footerhead .bottom .about .logo {
+        max-width: 100%;
+        height: auto !important;
+        width: 100%;
+    }
+}
 @media (max-width: 719px){
+    .box .comments {
+        width: 100%;
+        float: none;
+        margin-bottom: 40px;
+    }
+    .box .skills {
+        width: 100%;
+        float: none;
+    }
     .service-box li {
         width:50%;
     }
+    .projects .filterbtn li {
+        margin-bottom: 2px;
+    }
+    .projects .filterbox li {
+        width: 50%;
+    }
+    .team .team-img li {
+        width: 50%;
+        margin-bottom: 10px;
+    }
+    .pricing .wrap-box .pricing-table {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+    .get-in form {
+        width: 100%;
+        margin-bottom: 20px;
+        float: none;
+    }
+    .get-in .map {
+        width: 100%;
+        float: none;
+    }
+    footer .footerhead .footer-menu {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+    footer .footerbottom .copyrights {
+        float: none;
+        margin-bottom: 20px;
+    }
+    footer .footerbottom .socialmedia {
+        float: none;
+        margin: 0 auto;
+        display: table;
+    }
 }
 @media (max-width: 479px){
+    .projects .filterbtn li {
+        float: none;
+
+    }
     .service-box li {
         width:100%;
         float:none;
     }
 }
-
-
-
-
-
 
 
