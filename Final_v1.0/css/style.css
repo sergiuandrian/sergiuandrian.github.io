@@ -476,19 +476,16 @@ header .nav li a:hover {
 }
 /*==========================================================================*/
 footer {
-    background: #222;
-
-}
-.footerhead {
+    background-color: #222;
     padding-top: 100px;
 }
-.footer-menu {
+footer .footerhead .footer-menu {
     width: 25%;
     float: left;
-    margin-bottom: 50px;
+    padding: 0 10px;
+    box-sizing: border-box;
 }
-.footer-menu h3 {
-    display: table;
+footer .footerhead .footer-menu h3 {
     color: #c5c5c5;
     text-transform: uppercase;
     font-weight: 700;
@@ -496,155 +493,146 @@ footer {
     border-bottom: 1px solid #888;
     margin-bottom: 20px;
 }
-.footer-menu a {
-    display: inline-block;
-    padding: 7px 0;
+footer .footerhead .footer-menu a {
     color: #9E9E9E;
     font-size: 11px;
 }
-.footer-menu .angle-right::before {
+footer .footerhead .top {
+    border-bottom: 1px solid #888;
+    padding-bottom: 30px;
+    margin-bottom: 50px;
+}
+footer .footerhead .top .footer-menu .angle li {
+    margin-bottom: 7px;
+}
+footer .footerhead .top .footer-menu .angle li a:before {
     display: inline-block;
     margin-right: 7px;
     color: #5b5b5b;
     content: "\f105";
     font-family: 'FontAwesome';
 }
-.footer-menu .tag {
-    display: inline-table;
-    margin: 2px 1px;
-    padding: 0 6px;
-    background: #2C2C2C;
+footer .footerhead .top .footer-menu .tag li {
+    float: left;
+    margin: 0 5px 5px 0;
+}
+footer .footerhead .top .footer-menu .tag li a {
+    padding: 6px;
+    display: inline-block;
+    background-color: #2C2C2C;
     color: #C4C4C4;
-    font-size: 11px;
 }
 /*==========================================================================*/
-.middleborder {
-    clear: both;
-    margin: 50px 15px;
-    border-bottom: 1px solid #888;
-}
-.footer-menu i {
-    color: #6a6a6a;
-    font-size: 15px;
-}
-.footer-menu .fa-home:before {
-    font-family: 'FontAwesome';
-    content: "\f015";
-}
-.footer-menu .fa-globe:before {
-    font-family: 'FontAwesome';
-    content: "\f0ac";
-}
-.footer-menu .fa-phone:before {
-    font-family: 'FontAwesome';
-    content: "\f095";
-}
-.footer-menu .fa-marker:before {
-    font-family: 'FontAwesome';
-    content: "\f041";
-}
-.footer-menu .contacts li:nth-child(2n+1) {
-    display: inline-block;
-    padding: 7px 0;
+footer .footerhead .bottom .footer-menu .contacts li {
+    margin-bottom: 7px;
     color: #9E9E9E;
     font-size: 11px;
 }
-.footer-menu .logo {
-    background-image: url('../images/logo.png');
-    background-repeat: no-repeat;
-    height: 40px;
-    margin: 0 auto 5px;
+footer .footerhead .bottom .footer-menu .contacts li i {
+    color: #6a6a6a;
+    font-size: 15px;
+    margin-right: 5px;
 }
-.footer-menu p {
+footer .footerhead .bottom .footer-menu .contacts li i:before {
+    font-family: 'FontAwesome';
+}
+footer .footerhead .bottom .about {
+    text-align: center;
+    padding: 0 30px;
+}
+footer .footerhead .bottom .about .logo {
+    background: url('../images/logo.png') no-repeat;
+    height: 40px;
+    width: 200px;
+    margin: 0 auto 20px;
+}
+footer .footerhead .bottom .about p {
     font-size: 11px;
     color: #C4C4C4;
-    margin: 15px 40px 8px;
-    text-align: center;
-    line-height: 22px;
-    margin-left: 0;
+    margin-bottom: 8px;
 }
-.action {
-    display: table;
-    margin: 0;
+footer .footerhead .bottom .about form {
+    width: 100%;
 }
-.action input[type=email] {
+footer .footerhead .bottom .about form input[type=email] {
     height: 30px;
     background-color: transparent;
     border: 1px solid #3F3F3F;
+    float: left;
+    width: 80%;
 }
-.action input[type=submit] {
-    background: #3F3F3F;
+footer .footerhead .bottom .about form input[type=submit] {
+    background-color: #3F3F3F;
     color: #fff;
     border: 0;
     font-size: 12px;
-    line-height: 30px;
+    height: 30px;
     text-transform: uppercase;
-}
-.dogs li {
     float: left;
+    width: 20%;
+    cursor: pointer;
 }
-.dogs a {
-    height: 61px;
-    padding: 0;
+footer .footerhead .bottom .flickr li {
+    float: left;
+    width: 25%;
+}
+footer .footerhead .bottom .flickr li img {
+    max-width: 100%;
     display: block;
 }
-.dogs img {
-    height: 61px;
-    width: 61px;
+/*==========================================================================*/ 
+footer .footerbottom {
+    padding: 15px 0;
+    border-top: 1px solid #363636 ;
+    background-color: #1D1D1D;
+}
+footer .footerbottom .copyrights {
+    font-size: 11px;
+    float: left;
+}
+footer .footerbottom .copyrights span {
+    float: left;
+    margin-right: 10px;
+    color: #777;
+}
+footer .footerbottom .copyrights span b {
+    color: orangered;
+}
+footer .footerbottom .copyrights ul {
+    float: left;
+}
+footer .footerbottom .copyrights li {
+    float: left;
+    margin-right: 10px;
+    padding-right: 10px;
+    border-right: 1px solid #777;
+    line-height: 1; 
+}
+footer .footerbottom .copyrights li:last-child {
+    border: 0;
+}
+footer .footerbottom .copyrights li a {
+    text-decoration: underline;
+    color: #777;
+}
+footer .footerbottom .copyrights li a:hover {
+    text-decoration: none;
 }
 /*==========================================================================*/
-.footerbottom {
-    padding: 15px 0;
-    border-top: 1px #363636 solid;
-    background: #1D1D1D;
-    overflow: hidden;
-}
-
-.footerbottom .copyrights {
-    font-size: 11px;
-    color: #777;
-    width: 40%;
-    float: left;
-}
-.footerbottom .socialmedia {
+footer .footerbottom .socialmedia {
     float: right;
 }
-.socialmedia ul li {
+footer .footerbottom .socialmedia li {
     float: left;
 }
-.footerbottom .socialmedia ul li a:hover {
+footer .footerbottom .socialmedia li a {
+    padding: 12px;
+    font-family: 'FontAwesome';
+    color: #999;
+}
+footer .footerbottom .socialmedia li a:hover {
     background-color: #f00;
-}
-.socialmedia span {
-    padding: 0 12px;
-}
-.socialmedia .fa-dribble:before {
-    font-family: 'FontAwesome';
-    content: "\f17d";
-}
-.socialmedia .fa-facebook:before {
-    font-family: 'FontAwesome';
-    content: "\f09a";
-}
-.socialmedia .fa-linkedin:before {
-    font-family: 'FontAwesome';
-    content: "\f0e1";
-}
-.socialmedia .fa-skype:before {
-    font-family: 'FontAwesome';
-    content: "\f17e";
-}
-.socialmedia .fa-tumbler:before {
-    font-family: 'FontAwesome';
-    content: "\f173";
-}
-.socialmedia .fa-twitter:before {
-    font-family: 'FontAwesome';
-    content: "\f099";
-}
-.socialmedia .fa-YouTube:before {
-    font-family: 'FontAwesome';
-    content: "\f167";
+    color: #fff;
 }
 /*==========================================================================*/
 @media (max-width: 719px){
