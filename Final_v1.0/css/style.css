@@ -49,7 +49,7 @@ header .logo {
     background-image: url('../images/logo.png');
     height: 40px;
     width: 200px;
-    display: inline-block;
+    display: block;
     float: left;
 }
 header .nav {
@@ -725,5 +725,19 @@ footer .footerbottom .socialmedia li a:hover {
         float:none;
     }
 }
-
+/*==========================================================================*/
+/*==========================================================================*/
+.tasks{
+    background-image: url('../images/bg-image.jpg');
+}
+.tasks .task-box {
+    width: 50%;
+    box-sizing: border-box;
+    float: left;
+    margin-bottom: 20px;
+}
+.tasks .task-box span {
+    display: block;
+    text-align: center;
+}
 
