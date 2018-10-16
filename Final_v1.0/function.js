@@ -1,3 +1,24 @@
+// function alerto(){
+// 	var input = prompt('kakoi seicias god?');
+// 	if(input === '2015'){
+// 		alert('verno');
+// 	}else{
+// 		alert('s duba ruhnul?');
+// 	}
+// }
+// function getNum(){
+// 	var input = prompt('vvedite cislo');
+// 	if(input === '0' ){
+// 		alert('0');
+// 	}if(input === '1') {
+// 		alert('1');
+// 	}else{
+// 		alert('-1');
+// 	}
+// }
+// var a = 1, b = 2;
+// a + b >= 3 ? alert('Yep!') : alert('Noup!');
+
 // In the following example, markers appear when the user clicks on the map.
 // Each marker is labeled with a single alphabetical character.
 var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -39,3 +60,4 @@ function loadScript()
 window.onload = loadScript;
 
 google.maps.event.addDomListener(window, 'load', initialize);
+

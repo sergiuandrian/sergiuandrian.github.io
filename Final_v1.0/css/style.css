@@ -731,10 +731,14 @@ footer .footerbottom .socialmedia li a:hover {
     background-image: url('../images/bg-image.jpg');
 }
 .tasks .task-box {
-    width: 50%;
+    width: 48%;
     box-sizing: border-box;
     float: left;
-    margin-bottom: 20px;
+    margin: 20px 1%;
+    border: 1px solid #000;
+    background-color: #585858;
+    height: 250px;
+    
 }
 .tasks .task-box span {
     display: block;
