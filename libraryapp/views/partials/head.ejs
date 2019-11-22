@@ -1,0 +1,81 @@
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link rel="stylesheet" type="text/css" href="/css/form.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>  
+  <script src="/js/lib/ejs.js"></script>
+  <script src="/js/clientscripts.js"></script>
+  <script src="/js/ajax.js"></script>
+  <script src="/ejs/side-menu.ejs"></script>
+  <title>Books Online</title>
+  <!-- <script type="text/javascript">
+    var activeDataPage = [<%=  %>];
+  </script> -->
+
+  <!-- Temporary added mobile menu script here === by Evgheni === -->
+  <script>
+    // ===== Mobile Menu =====
+    $(document).ready(function(){
+      $(".mob-nav-icon .fa-times, .mob-close-name").hide(); // Hide close icon and name on page load
+      $("#mob-login-window").hide(); // Hide login window on page load
+
+      // Menu Button
+      $("#mob-menu-btn").click(function() {
+        $(this).toggleClass("mob-btn-active");
+        $(".mob-nav").toggleClass("mob-nav-active");
+        $(".mob-nav-window, #mob-menu-btn .mob-menu-name, #mob-menu-btn .fa-bars, #mob-menu-btn .mob-close-name, #mob-menu-btn .fa-times").toggle(300);
+        $("header, main").toggle(300);
+      });
+
+      // Search Button 
+      var focused = false;
+      $("#mob-search-btn").click(function() {
+        $(this).toggleClass("mob-btn-active");
+        $(".mob-nav").toggleClass("mob-nav-active");
+        $("#mob-search-btn .mob-search-name, #mob-search-btn .fa-search, #mob-search-btn .mob-close-name, #mob-search-btn .fa-times").toggle(300);
+        if (focused == true) {
+          $(".search-container input").blur();
+          focused = false;
+        }
+        else{
+          $(".search-container input").focus();
+          focused = true;
+        }
+      });
+
+      // Basket Button
+      $("#mob-basket-btn").click(function() {
+        $(this).toggleClass("mob-btn-active");
+        $(".mob-nav").toggleClass("mob-nav-active");
+        $("#mob-basket-btn .mob-basket-name, #mob-basket-btn .fa-shopping-cart, #mob-basket-btn .mob-close-name, #mob-basket-btn .fa-times").toggle(300);
+        $(".windowCart").toggle(300);
+        $("header, main").toggle();
+      });
+
+      // Account Button
+      $("#mob-account-btn").click(function() {
+        $(this).toggleClass("mob-btn-active");
+        $(".mob-nav").toggleClass("mob-nav-active");
+        $("#mob-login-window, #mob-account-btn .mob-account-name, #mob-account-btn .fa-user, #mob-account-btn .mob-close-name, #mob-account-btn .fa-times").toggle(300);
+        $("header, main").toggle(300);
+      });
+
+      // Mobile Menu Window
+
+      // Main Menu
+      $("#mob-main-menu-btn").click(function() {
+        $(".mob-main-menu-window").toggle(300);
+      });
+      // Categories
+      $("#mob-categories-btn").click(function() {
+        $(".mob-categories-window").toggle(300);
+      });
+      // More
+      $("#mob-more-btn").click(function() {
+        $(".mob-more-window").toggle(300);
+      });
+    });
+  </script>

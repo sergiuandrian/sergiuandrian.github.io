@@ -1,0 +1,29 @@
+  <% layout("layouts/default") %>
+    <div class="sidebar-and-books-window-container">
+      <!-- Details Window -->
+      <div book-details style="clear:both; display:inline-block;">
+        <section class="books" id="<%= book._id %>" data-id="<%= book.id %>">
+          <img src="/images/<%= book.img %>" data-src="/images/<%= book.img %>" alt="book">
+          <h3 data-author="<%= book.author %>"><%= book.author.name %></h3>
+          <h4 data-title="<%= book.title %>"><%= book.title %></h4>
+          <p data-decription="<%= book.description %>"><%= book.description %></p>
+          <span>$60</span>
+          <input data-id="<%= book.id %>" class="js-cart-add" type="submit" value="ADD TO CART" />
+        </section>
+
+      </div>
+      <div id="container">
+        <form>
+          <input type="text"><br><br>
+          <input type="text"><br><br>
+          <textarea></textarea>
+        </form>
+      </div>
+      <div id="comments">
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+        <p>5</p>
+      </div>
+    </div>

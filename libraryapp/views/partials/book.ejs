@@ -1,0 +1,16 @@
+<section class="books clear-floats" id="<%= _id %>" data-id="<%= id%>">
+  <div class="book-wrap">
+    <a href="/details/<%= _id %>">
+      <div class="hover-wrap">
+        <img src="/images/<%= img %>" data-src="/images/<%= img %>" alt="book">
+        <div class="hover-layout">
+          <p class="hover-layout-text">More details</p>
+        </div>
+      </div>
+    </a>
+    <h3 data-author="<%= author._id %>"><%= authors.name %></h3>
+    <h4 data-title="<%= title %>"><%= title %></h4>
+    <span>$60</span>
+    <input data-id="<%= id %>" class="js-cart-add" type="submit" value="ADD TO CART" />
+  </div>
+</section>

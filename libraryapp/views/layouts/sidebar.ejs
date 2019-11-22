@@ -1,0 +1,14 @@
+<% layout("layouts/default") %>
+
+<div class="sidebar-and-books-window-container">
+    <div class="sidebar">
+        <section>
+            <%- include('../partials/sidemenu', { 
+                    currentRoute: currentRoute, 
+                    links: sidebarLinks }) %>
+        </section>
+    </div>
+    <div class="books-window">  
+        <%- body %>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+<% layout("layouts/account") %>
+<div class="userSettings">
+    <h2>Personal details</h2>
+    <ul>
+        <li><span>Full name</span></li>
+        <li><input id="fullName" type="text" required><p>Please include youre First Name and Last Name.</p></li>
+        <li>
+            <span>Date of birth</span>
+            <ul class="dateBirth">
+                <li><input type="number" name="day" placeholder="Day" min="0" max="31" required></li>
+                <li><input type="number" name="month" placeholder="Month" min="0" max="12" required></li>
+                <li><input type="number" name="year" placeholder="Year" min="1930" max="2010" required></li>
+                <li><p>Please include youre Date of birth.</p></li>
+            </ul>
+        </li>
+    </ul>
+    <div class="empty"></div>
+    <h2>Your site appearance</h2>
+    <ul>
+        <li><span>Screen name</span></li>
+        <li><input id="screenName" type="text" required><p>This is the name we'll show when you write a review and on your shared wishlists.</p></li>
+        <li class="empty"></li>
+        <li><span>Location</span></li>
+        <li><input id="location" type="text" required><p>This is the location we'll show when you write a review.</p></li>
+    </ul>
+    <h2>Newsletter</h2>
+    <ul class="checkbox">
+        <li><input type="radio" name="confirmation"></li>
+        <li id="confirmation"><p>I confirm I would like to receive emails and marketing material from library.com</p></li>
+        <li><input type="radio" name="confirmation"></li>
+        <li><p>I would not like to receive emails or any other marketing material from library.com</p></li>
+        <li><p><a href="#">Click here</a> to see our Ts & Cs and our promise to protect your data. Please confirm below that you accept our terms and conditions:</p></li>
+        <li><input type="checkbox" required></li>
+        <li><p> I agree to terms & conditions.</p></li>
+        <li><button class="submitSettings" type="submit">Submit</button></li>
+    </ul>
+</div>

@@ -1,0 +1,97 @@
+<!-- Wrapper For Fixed Header -->
+
+<div class="windowCart">
+    <form name="windowCartForm">
+        <span class="no-data-warning">Cart is empty. Fill the cart!!!</span>
+        <table class="selectedBooks" border="1px"  cellpadding="10">
+            <thead>
+                <tr>
+                <th>Photo</th>
+                <th>Author</th>
+                <th>Title</th>
+                <th id="quantityBooks">Quantity</th>
+                <th>Price</th>
+                <th></th>
+                </tr>
+            </thead>
+            <tbody class="bookDescription">
+            </tbody>
+            <tbody class="totalBookCost">
+            </tbody>
+        </table>
+    </form>
+    <div class="buttonsCart">
+        <ul>
+            <li><button id="buttonContinue" type="button">Continue</button></li>
+            <li><a href="/payment"><button id="buttonCheckout" type="submit">Checkout</button></a></li>
+        </ul>
+    </div>
+</div>
+<div class="header-wrap">
+    <div class='backgroundCartHeader'></div>
+        <!-- Top Header -->
+
+    <div class="top-header">
+        <div class="page-width">
+            <ul>
+                <li><a onclick="showForm()">Sign in</a></li>
+                <li><a href="/account">My Account</a></li>
+                <li><a href="/contacts">Contacts</a></li>
+                <li><a href="/help">Help</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="login" class="show">
+        <fieldset>
+            <form method="POST">
+                <input type="email" name="logemail" placeholder="Login or Email" required>
+                <input type="password" name="logpassword" placeholder="Password" required>
+                <button type="submit" id="mob-signin-btn">Sign in</button>
+                <button id="mob-register-btn"><a style="display: block;" href="/signup">Register</a></button>
+                <a href="#">FORGOTTEN YOUR PASSWORD?</a>
+            </form>
+            <p>Sign in with: <span class="social fb">Facebook</span> <span class="social gp">Google +</span></p>
+        </fieldset>
+    </div>
+
+    <!-- Bottom Header -->
+
+    <div class="bottom-header">
+        <div class="bottom-header-wrap page-width">
+            <a href="/"><img src="/images/logo.png" class="logo" alt="logo"></a>
+            <div class="search-container">
+                <form id="form" method="POST" class="search-wrapper">
+                    <input type="text" list="list" name="search" value="<%= filters.searchString %>">
+                    <datalist id="list">
+                        <%for(var i = 0; i < authors.length; i++){ %>
+                            <option value="<%= authors[i].name %>"></option>
+                        <% }%>
+                    </datalist>
+                    <button class="js_getpage" type="submit" data-filter='{ "searchString": "[name=search]" }'>
+                        <i class="fa fa-search"></i>Search
+                    </button>
+                </form>
+            </div>
+            <div class="shopping-checkout-container">
+                <div class="shopping-cart">
+                    <img id="cart" src="/images/cart.png" alt="cart">
+                    <span class="span-normal">Your cart</span>
+                    <span class="span-small" id="currentNumber">0 (items)</span>
+                </div>
+                <div class="checkout">
+                    <span class="span-bold"></span>
+                    <a href="/payment"><button type="submit">Checkout</button></a>
+                </div>
+            </div>
+            <div class="wish-list-container">
+                <div class="wish-list-image">
+                    <a href="/wishlist"><img id="wishList" src="/images/wish-list.png" alt="wish-list"></a>
+                </div>
+                <div class="wish-list-data">
+                    <span class="span-normal">Wish list</span>
+                    <span class="wish-list-amount">20</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

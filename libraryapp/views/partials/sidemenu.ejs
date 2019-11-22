@@ -1,0 +1,5 @@
+<% for (var i = 0; i < links.length; i++) {%>
+    <ul id="genre" class="js_getpage">
+        <li class="<%= currentRoute == links[i].url ? 'active' : '' %>"><a href="<%= links[i].url %>"><%= links[i].title %></a></li>
+    </ul>
+<% }%>

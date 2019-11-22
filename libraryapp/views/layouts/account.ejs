@@ -1,0 +1,14 @@
+<%
+    this.sidebarLinks = [
+        { title: 'My Account', url:'/account' },
+        { title: 'My Settings', url:'/settings' },
+        { title: 'My Addresses', url: '/addresses' },
+        { title: 'My Orders', url: '/orders' },
+        { title: 'My Payment', url: '/payment' },
+        { title: 'My Wishlist', url: '/wishlist' },
+        { title: 'My Reviews', url: '/reviews' }
+    ];
+%>
+<% layout("layouts/sidebar") %>
+
+<%- body %>

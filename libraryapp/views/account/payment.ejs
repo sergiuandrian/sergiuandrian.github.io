@@ -1,0 +1,47 @@
+<% layout("layouts/account") %>
+<form name="windowCartForm">
+    <table class="selectedBooks" border="1px"  cellpadding="10">
+        <thead>
+            <tr>
+            <th>Photo</th>
+            <th>Author</th>
+            <th>Title</th>
+            <th id="quantityBooks">Quantity</th>
+            <th>Price</th>
+            <th></th>
+            </tr>
+        </thead>
+        <% for (var i = 0; i < userCurrentCart.length; i++) {%>
+            <% for (var j = 0; j < orderedUserBooks.length; j++) {%>
+                <% if (userCurrentCart[i].id == orderedUserBooks[j].id) {%>
+        <tbody class="bookDescription">
+            <tr data-number="<%= userCurrentCart[i].id %>">
+                <td><img src= '/images/<%= orderedUserBooks[j].img %>' alt="Book"></td>
+                <td><%= orderedUserBooks[j].author.name %></td>
+                <td><%= orderedUserBooks[j].title %></td>
+                <td><%= userCurrentCart[i].quantity %></td>
+                <td><%= orderedUserBooks[j].price %><%= '$' %></td>
+                <td><button class="deleteButton" data-bookid="<%= userCurrentCart[i].id %>" type="button">Remove</button></td>
+            </tr>
+        </tbody>
+                <% }%>
+            <% }%>
+        <% }%>
+        <tbody class="totalBookCost">
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><%= "Total Cost:" %></td>
+                <td id="totalPriceBooks"><%=  %><%= '$' %></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</form>
+<div class="buttonsCart">
+    <ul>
+        <li><button id="buttonBuyOrder" type="button">Buy</button></li>
+    </ul>
+</div>
+

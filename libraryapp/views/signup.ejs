@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/form.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <% include partials/head %>
+</head>
+
+<body>
+  <header id="header" style="margin-bottom: 25px">
+    <div class="header-wrap">
+      <div class="top-header">
+        <div class="page-width">
+          <ul>
+            <li onclick="showForm()">Sign in</li>
+            <li><a href="/account">My Account</a></li>
+            <li><a href="/contacts">Contacts</a></li>
+            <li><a href="/help">Help</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottom-header">
+        <div class="bottom-header-wrap page-width">
+          <img src="images/logo.png" class="logo" alt="logo">
+          <div class="shopping-checkout-container">
+            <div class="shopping-cart">
+              <img id="cart" src="images/cart.png" alt="cart">
+              <span class="span-normal">Your cart</span>
+              <span class="span-small" id="currentNumber"></span>
+            </div>
+            <div class="checkout">
+              <span class="span-bold">$125.0</span>
+              <button type="submit">Checkout</button>
+            </div>
+          </div>
+          <div class="wish-list-container">
+            <div class="wish-list-image">
+              <img src="images/wish-list.png" alt="wish-list">
+            </div>
+            <div class="wish-list-data">
+              <span class="span-normal">Wish list</span>
+              <span class="wish-list-amount">20</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div id="login">
+    <div class="form-signup">
+      <h1>Sign up</h1>
+      <fieldset>
+        <p class="login-msg"></p>
+        <form method="POST">
+            <input type="email" name="email" placeholder="Enter your email" required />
+            <input type="text" name="username" placeholder="Name" required />
+            <input type="password" name="password" placeholder="Password" required />
+            <input type="password" name="passwordConf" placeholder="Confirm Password" id="password_conf" required="">
+            <button type="submit" id="mob-register-btn">Register</button>
+            <!-- <input type="submit" value="Submit" /> -->
+          </form>
+        <p>Войти через: <span class="social fb">Facebook</span> <span class="social gp">Google +</span></p>
+        <a href="/" class="flipper">Уже зарегистрированы? Войти.</a>
+      </fieldset>
+    </div>
+  </div>
+</body>
+
+</html>

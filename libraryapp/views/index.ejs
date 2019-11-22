@@ -1,0 +1,208 @@
+<% layout("layouts/default") %>
+
+<!-- Main Sliders  -->
+
+<div class="sliders-container clear-floats" style="display:none">
+
+  <!-- Left Slider -->
+
+  <div class="left-slider-container clear-floats">
+    <img src="images/Banner.png" alt="banner">
+    <a href="#" class="previous round">&#10094;</a>
+    <a href="#" class="next round">&#10095;</a>
+  </div>
+
+  <!-- Right Slider -->
+
+  <div class="right-slider-container">
+    <img src="images/deal-of-the-month.png" alt="deal-of-the-month">
+    <button type="button">Buy now</button>
+  </div>
+</div>
+
+<!-- ===== Sidebar & Books Window Container ===== -->
+<div class="sidebar-and-books-window-container">
+
+  <!-- Sidebar -->
+
+  <div class="sidebar clear-floats">
+    <p>Categories</p>
+      <h3 class='<%= filters.categoryId ? '' : 'active' %>'><a href="">ALL</a></h3>
+    <section>
+      <ul id="genre" class="js_getpage">
+        <% for(var i = 0; i < categories.length; i++){%>
+        <li value="<%= categories[i].name %>" class="<%=categories[i].name == filters.category ? 'active' : null %>">
+          <a class="js_getpage" href="?category=<%= categories[i].name %>" data-filter='{ "category": "<%= categories[i].name %>","pageNumber": 1}'><%= categories[i].title %></a>
+        </li>
+        <%} %>
+      </ul>
+    </section>
+  </div>
+
+  <!-- Books Window -->
+
+  <div class="books-window clear-floats">
+
+    <!-- Here is a sample how to do it https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_full_page_tabs -->
+
+    <!-- Tabs -->
+
+    <div class="tabs">
+      <button class="tablink" onclick="openPage('best-sellers')" id="defaultOpen">Best Sellers</button>
+      <button class="tablink" onclick="openPage('new-arrivals')">New Arrivals</button>
+      <button class="tablink" onclick="openPage('used-books')">Used Books</button>
+      <button class="tablink" onclick="openPage('special-offers')">Special Offers</button>
+    </div>
+
+    <div id="best-sellers" class="tabcontent">
+
+      <!-- Each book is in a separate section -->
+
+      <div id="books-list" class="clear-floats">
+        <%for (var i = 0; i < records.length; i++) {%>
+        <%- include('partials/book', records[i]) %>
+        <%} %>
+      </div>
+
+      <!-- Pagination -->
+
+      <div class="pagination">
+        <%for (var j=0; j < totalRecords/pageSize; j++) {%>
+        <a class="js_getpage <%= pageNumber == j+1 ? 'active' : '' %>" href="?pageNumber=<%= j+1 %>"
+          data-filter='{"pageNumber": <%= j+1 %>}'>
+          <p><%= j+1 %></p>
+        </a>
+        <%} %>
+
+      </div>
+
+      <script id="book_template" type="text/template">
+        <%- bookTemplate %>
+      </script>
+    </div>
+
+
+    <div id="new-arrivals" class="tabcontent"></div>
+    <div id="used-books" class="tabcontent"></div>
+    <div id="special-offers" class="tabcontent"></div>
+  </div>
+</div>
+
+<!-- ========== Mobile Menu ========== -->
+
+<!-- Mobile Login Window -->
+<div id="mob-login-window">
+    <div class="mob-login-window-wrap">
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Password" required>
+      <button type="submit" id="mob-signin-btn">Sign in</button>
+      <button type="submit" id="mob-register-btn">Register</button>
+      <a href="#">FORGOTTEN YOUR PASSWORD?</a>
+    </div>
+  </div>
+</div>
+
+<!-- Mobile Menu PopUp Window -->
+<div class="mob-nav-window">
+  <div class="mob-menu-window">
+
+    <!-- Main Menu Button -->
+    <div id="mob-main-menu-btn" class="mob-link">
+      <span class="mon-link-name">Main Menu</span>
+      <span><i class="fas fa-angle-down"></i></span>
+    </div>
+
+    <!-- Main Menu Window -->
+    <ul class="mob-main-menu-window">
+      <li><a href="#">Computers</a></li>
+      <li><a href="#">Cooking</a></li>
+      <li><a href="#">Education</a></li>
+      <li><a href="#">Fiction</a></li>
+      <li><a href="#">Health</a></li>
+      <li><a href="#">Mathematics</a></li>
+      <li><a href="#">Medical</a></li>
+      <li><a href="#">Reference</a></li>
+      <li><a href="#">Science</a></li>
+    </ul>
+
+    <!-- Categories Menu Button -->
+    <div id="mob-categories-btn" class="mob-link">
+      <span class="mon-link-name">Categories</span>
+      <span><i class="fas fa-angle-down"></i></span>
+    </div>
+
+    <!-- Categories Menu Window -->
+    <ul class="mob-categories-window">
+      <li><a href="#">ALL</a></li>
+      <li><a href="#">Fantasy</a></li>
+      <li><a href="#">Children</a></li>
+      <li><a href="#">Detective</a></li>
+      <li><a href="#">History</a></li>
+    </ul>
+
+    <!-- More Button -->
+    <div id="mob-more-btn" class="mob-link">
+      <span class="mon-link-name">More</span>
+      <span><i class="fas fa-angle-down"></i></span>
+    </div>
+
+    <!-- More Window -->
+    <ul class="mob-more-window">
+      <li><a href="#">Wish list</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Help & Contact</a></li>
+    </ul>
+
+  </div>
+</div>
+
+<!-- Mobile Nav Buttons -->
+<div class="mob-nav">
+  <ul>
+    <!-- Menu Button -->
+    <li id="mob-menu-btn">
+      <a href="#">
+        <span class="mob-nav-icon">
+          <i class="fas fa-bars"></i>
+          <i class="fas fa-times"></i>
+        </span>
+        <span class="mob-nav-name mob-menu-name">menu</span>
+        <span class="mob-nav-name mob-close-name">close</span>
+      </a>
+    </li>
+    <!-- Search Button -->
+    <li id="mob-search-btn">
+      <a href="#">
+        <span class="mob-nav-icon">
+          <i class="fas fa-search"></i>
+          <i class="fas fa-times"></i>
+        </span>
+        <span class="mob-nav-name mob-search-name">search</span>
+        <span class="mob-nav-name mob-close-name">close</span>
+      </a>
+    </li>
+    <!-- Basket Button -->
+    <li id="mob-basket-btn">
+      <a href="#">
+        <span class="mob-nav-icon">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="span-small" id="currentNumber"></span>
+          <i class="fas fa-times"></i>
+        </span>
+        <span class="mob-nav-name mob-basket-name">basket</span>
+        <span class="mob-nav-name mob-close-name">close</span>
+      </a>
+    </li>
+    <!-- Account Button -->
+    <li id="mob-account-btn">
+      <a href="#">
+        <span class="mob-nav-icon">
+          <i class="fas fa-user"></i>
+          <i class="fas fa-times"></i>
+        </span>
+        <span class="mob-nav-name mob-account-name">account</span>
+        <span class="mob-nav-name mob-close-name">close</span>
+      </a>
+    </li>
+  </ul>
+</div>
