@@ -1,0 +1,52 @@
+.table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    background-color: black;
+    position: absolute;
+}
+.table tr td{
+    padding: 0;
+    width: 40px;
+    height: 40px;
+}
+.brick{
+    background-image: url("images/brick.png");
+}
+.stone{
+    background-image: url("images/stone.png");
+}
+.water{
+    background-image: url("images/water.png");
+}
+.rank{
+    background-image: url("images/rank.png");
+}
+.battle-field .tank{
+    background-size: cover;
+    position: relative;
+    height: 100%;
+}
+.battle-field .tank-1{
+    background-image: url('images/tank-1.png');
+}
+.battle-field .tank-2{
+    background-image: url('images/tank-2.png');
+}
+.orientation-1{
+    transform: rotate(0deg);
+}
+.orientation-2{
+    transform: rotate(90deg);
+}
+.orientation-3{
+    transform: rotate(180deg);
+}
+.orientation-4{
+    transform: rotate(270deg);
+}
+.bullet{
+    height: 8px;
+    width: 8px;
+    background-color: #fff;
+    margin: auto;
+}
