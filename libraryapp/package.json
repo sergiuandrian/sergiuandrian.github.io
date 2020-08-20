@@ -2,7 +2,7 @@
   "name": "libraryapp",
   "version": "1.0.0",
   "dependencies": {
-    "bcrypt": "^3.0.4",
+    "bcrypt": "^5.0.0",
     "body-parser": "^1.17.1",
     "connect-mongo": "^1.3.2",
     "cookie-parser": "^1.4.3",
